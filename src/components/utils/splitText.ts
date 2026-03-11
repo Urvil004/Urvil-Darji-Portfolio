@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 gsap.config({ force3D: true });
 
 export default function setSplitText() {
-  ScrollTrigger.config({
+  (ScrollTrigger as any).config({
     ignoreMobileResize: true,
     fastScrollEnd: true,
     preventOverlaps: true,
