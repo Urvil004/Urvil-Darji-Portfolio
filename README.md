@@ -9,7 +9,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Urvil004)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:techwithurvil@gmail.com)
 
-![Portfolio Preview](file:///C:/Users/Urvil/OneDrive/Pictures/Screenshots/Screenshot%202026-03-11%20200523.png)
+![Portfolio Preview](https://i.postimg.cc/ry5H7zCB/Screenshot-2026-03-11-200523.png)
 
 </div>
 
@@ -216,7 +216,7 @@ For production deployment, a valid GSAP license is required:
 
 ## 📄 License
 
-Original design by [Rajesh Chityal](https://urvil-portfolio.vercel.app/) — MIT License.
+Original design by [Urvil Darji](https://urvil-portfolio.vercel.app/) — MIT License.
 
 ---
 
