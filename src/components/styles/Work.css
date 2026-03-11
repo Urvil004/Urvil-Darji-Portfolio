@@ -1,0 +1,237 @@
+/* ── Work Section ── */
+.work-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding: 80px 0;
+}
+
+.work-section h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.work-section h2>span {
+  color: var(--accentColor);
+}
+
+.work-container {
+  margin: auto;
+}
+
+/* ── Slider / Single Card ── */
+.work-slider {
+  width: 100%;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  min-height: 520px;
+  padding: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Even projects — flip column order */
+.project-card.even {
+  grid-template-columns: 45% 55%;
+}
+.project-card.even .project-image {
+  order: 2;
+}
+.project-card.even .project-info {
+  order: 1;
+}
+
+.project-image {
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  display: block;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.project-number {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.project-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.project-category {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.category-fullstack {
+  background: rgba(0, 229, 178, 0.15);
+  color: #00e5b2;
+  border: 1px solid rgba(0, 229, 178, 0.3);
+}
+
+.category-frontend {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.tools-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 8px;
+}
+
+.tools-list {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Pagination ── */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.pagination-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.pagination-btn:hover {
+  background: rgba(0, 229, 178, 0.15);
+  border-color: rgba(0, 229, 178, 0.6);
+  color: #00e5b2;
+  transform: scale(1.08);
+}
+
+.pagination-btn:disabled,
+.pagination-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.pagination-counter {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.1em;
+  min-width: 72px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1400px) {
+  .work-section h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-section {
+    padding: 50px 0;
+  }
+
+  .work-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card,
+  .project-card.even {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .project-card.even .project-image,
+  .project-card.even .project-info {
+    order: unset;
+  }
+
+  .project-image {
+    height: 220px;
+  }
+
+  .project-number {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .pagination-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
